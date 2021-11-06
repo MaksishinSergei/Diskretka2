@@ -7,16 +7,23 @@
 using namespace std;
 bool Tnull(bool f)
 {
-    if (f==0){
-        return 1;}else{return 0;}
+    if (f==0) {
+        return 1;
+    } else {
+        return 0;
+    }
 }
 bool Tone(bool f)
 {
-    if (f==1){
-        return 1;}else{return 0;}
+    if (f==1) {
+        return 1;
+    } else {
+        return 0;
+    }
 }
 int main()
 {
+    string Min="(!xy)+(x!z)";
     bool P;
     int K;
     cout<<"Введите кол-во единичных наборов: "<<endl;
@@ -107,7 +114,8 @@ int main()
     string G="(";
     bool zna[8],znach[8],znach1[8];
     int d=8;
-    for (int i=0; i<d; i++) {{
+    for (int i=0; i<d; i++) {
+        {
             if (i<(d/2)) {
                 x=0;
             } else {
@@ -188,9 +196,10 @@ int main()
             break;
         }
     }
+    cout<<"min ДНФ: "<<Min<<endl;
     cout<<setw(8)<<"T0"<<setw(8)<<"T1"<<setw(8)<<"S"<<setw(8)<<"M"<<setw(8)<<"L"<<endl;
     cout<<setw(8)<<nullT<<setw(8)<<oneT<<setw(8)<<samka<<setw(8)<<Mono<<setw(8)<<LinT<<endl;
-    if ((nullT==0)&&(oneT==0)&&(samka==0)&&(Mono==0)&&(LinT==0)){
+    if ((nullT==0)&&(oneT==0)&&(samka==0)&&(Mono==0)&&(LinT==0)) {
         P=1;
         cout<<"Функция полная"<<endl;
     } else {
